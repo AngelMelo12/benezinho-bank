@@ -10,8 +10,12 @@ public class ContaPoupanca extends Conta{
     public ContaPoupanca() {
     }
 
-    public ContaPoupanca(Agencia agencia, Pessoa titular, double saldo, int aniversario) {
-        super(agencia, titular, saldo);
+    public ContaPoupanca(int aniversario) {
+        this.aniversario = aniversario;
+    }
+
+    public ContaPoupanca(String numero, Agencia agencia, Pessoa titular, double saldo, int aniversario) {
+        super(numero, agencia, titular, saldo);
         this.aniversario = aniversario;
     }
 
@@ -21,5 +25,13 @@ public class ContaPoupanca extends Conta{
 
     public void setAniversario(int aniversario) {
         this.aniversario = aniversario;
+    }
+
+
+    @Override
+    public String toString() {
+        return "ContaPoupanca{" +
+                "aniversario=" + aniversario +
+                "} " + super.toString();
     }
 }
