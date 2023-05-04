@@ -1,6 +1,7 @@
 package br.com.benezinhobank.pessoa.model;
 
 import java.time.LocalDate;
+import java.util.Collection;
 
 public class PessoaJuridica extends  Pessoa{
 
@@ -8,8 +9,10 @@ public class PessoaJuridica extends  Pessoa{
 
     private String razaoSocial;
 
+    Collection<Pessoa> socios;
 
     public PessoaJuridica() {
+
     }
 
     public PessoaJuridica(String nome, LocalDate nascimento, String CNPJ, String razaoSocial) {
